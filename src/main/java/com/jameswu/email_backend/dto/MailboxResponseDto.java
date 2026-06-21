@@ -1,7 +1,10 @@
 package com.jameswu.email_backend.dto;
 import java.util.List;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.Valid;
+
 public record MailboxResponseDto(
-    String id,
-    List<MailboxMailDto> mail
+    @NotBlank String name,
+    List<@Valid MailboxMailDto> mail
 ) {}
