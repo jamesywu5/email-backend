@@ -1,3 +1,13 @@
 spring:
   application:
     name: email-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dev
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: none
+server:
+  servlet:
+    context-path: /api/v0
