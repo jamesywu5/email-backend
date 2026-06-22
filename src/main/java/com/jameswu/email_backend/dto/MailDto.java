@@ -1,10 +1,13 @@
 package com.jameswu.email_backend.dto;
+
 import java.time.Instant;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.Valid;
+
 import java.util.UUID;
 
-public record MailboxMailDto(
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+
+public record MailDto (
     @NotBlank 
     UUID id,
 
@@ -12,5 +15,6 @@ public record MailboxMailDto(
     @Valid Contact to,
     String subject,
     Instant sent,
-    Instant received
+    Instant received,
+    String content
 ) {}
